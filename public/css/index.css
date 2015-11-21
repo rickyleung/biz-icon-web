@@ -1,0 +1,55 @@
+/**
+ * index
+ */
+
+.toolbar {
+	height: 30px;
+	margin-bottom: 30px;
+}
+
+.no-data {
+    padding-top: 180px;
+    background: url(../img/cry.png) center 20px no-repeat;
+    text-align: center;
+}
+
+.svg {
+	float: left;
+	width: 96px;
+	height: 116px;
+	background: #fff;
+	margin: 0 20px 20px 0;
+	padding: 10px;
+	position: relative;
+}
+
+.svg .name {
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+}
+
+.svg span {
+	position: absolute;
+	width: 114px;
+	height: 134px;
+	top: 0;
+	left: 0;
+	border: 1px solid #e5e5e5;
+	cursor: pointer;
+}
+
+.svg span:hover {
+    border: 1px solid #ccc;
+}
+
+.svg span.selected {
+    width: 112px;
+    height: 132px;
+	border: 2px solid #f74818;
+	background: right bottom url(../img/check.png) no-repeat;
+}
+
+.svgs {
+    overflow: hidden;
+}

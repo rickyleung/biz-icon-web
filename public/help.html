@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>BizIcon</title>
+<link type="text/css" rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+<div class="head">
+    <div class="title">BizIcon</div>
+    <ul class="menu">
+        <li><a href="/">图标库</a></li>
+        <li><a href="javascript:void(0);" class="active">帮助</a></li>
+    </ul>
+</div>
+<div class="main">
+	<div class="category">
+    	<ul>
+        	<li><a href="javascript:void(0);" class="active" id="1">平台介绍</a></li>
+            <li><a href="javascript:void(0);" id="2">使用教程</a></li>
+            <li><a href="javascript:void(0);" id="3">SVG制作标准</a></li>
+		</ul>
+    </div>
+    <div class="content">
+    	<div class="block content1">
+            <p class="title">为什么要使用图标字体（Icon font）？</p>
+            <ul>
+                <li>可以方便地修改图标的颜色、大小，并且不会失真</li>
+                <li>可以应用 CSS 视觉特效，如：缩放、旋转、阴影、渐变等</li>
+                <li>兼容性好，支持 IE6+</li>
+                <li>维护方便，不再需要把小图片拼成雪碧图</li>
+                <li>体积小，WOFF 字体要比 SVG 图像小 50% 以上</li>
+            </ul>
+            <p class="title">BizIcon 是什么？</p>
+            <p>BizIcon 是一套图标字体管理与生成方案，它包含：</p>
+            <ul>
+                <li>矢量图标库</li>
+                <li>图标字体自动生成器</li>
+            </ul>
+            <p>并具有如下特点：</p>
+            <ul>
+                <li>自动生成 EOT、TTF、WOFF、SVG 四种主流格式的 Web 字体</li>
+                <li>字体中的图标可以自由地定制</li>
+                <li>CSS、HTML代码自动生成，屏蔽浏览器兼容性</li>
+                <li>UED 维护图标库，与 FE 协作成本低</li>
+                <li>发布至 npm ，便于工程化管理</li>
+            </ul>
+        </div>
+        <div class="block content2" style="display:none">
+        	<p class="title">Step1. 安装 biz-icon</p>
+            <ul>
+                <li>首先你需要安装 NodeJS 环境：<a href="https://nodejs.org/en/download/" target="_blank">下载地址</a></li>
+                <li>安装 grunt：</li>
+                <pre>$ npm install grunt-cli -g</pre>
+                <li>安装 biz-icon：</li>
+                <pre>$ npm install biz-icon</pre>
+            </ul>
+            <p class="title">Step2. 下载 SVG 图标</p>
+            <ul>
+                <li>进入图标库，选择分类，批量下载选中的图标</li>
+                <li>将图标解压到 biz-icon/svg/</li>
+            </ul>
+            <p class="title">Step3. 修改配置文件：icons.json</p>
+            <pre>
+  {
+      "fontName": "BizIcon",         // 字体名称
+      "fontDest": "font/",           // 字体文件夹
+      "cssDest": "css/biz-icon.css", // CSS 路径
+      "cssFontsPath": "../font/"     // 字体相对于 CSS 的路径
+      "root": "svg/",                // SVG 根目录
+      "icons": [
+          {
+            "name": "search",        // CSS 后缀名
+            "svg": "search.svg"      // SVG 文件名
+          },
+          ...
+      ]
+  }
+            </pre>
+            <p class="title">Step4. 生成图标字体</p>
+            <pre>$ grunt</pre>
+        </div>
+        <div class="block content3" style="display:none">
+        	<p class="title">1. 画布尺寸：1024 x 1024px，分成 16 等份，每份宽 64px</p>
+            <img src="img/1.png" /><br />
+            <img src="img/2.png" /><br />
+            <p class="title">2. 图标尺寸：896 x 896px，水平垂直居中，四周各留 64px 空白</p>
+            <img src="img/3.png" /><br />
+            <p class="title">3. 保存成 SVG 前，检查源码，确认几个数值是否如图所示：</p>
+            <img src="img/4.png" /><br />
+            <img src="img/5.png" /><br />
+        </div>
+    </div>
+</div>
+<div class="foot">
+&copy; Sogou. Powered by <a href="mailto:bizdev_fe@sogou-inc.com">bizdev_fe</a>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/help.js"></script>
+</body>
+</html>

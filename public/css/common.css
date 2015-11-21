@@ -1,0 +1,110 @@
+/**
+ * common
+ */
+
+body {
+	margin: 0;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+
+.head {
+	background: #333 url(../img/logo.png) 30px center no-repeat;
+	height: 100px;
+	padding-left: 140px;
+}
+
+.head .title {
+	float: left;
+	height: 100px;
+	line-height: 100px;
+	font-size: 36px;
+	color: #fff;
+}
+
+.menu {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-left: 30px;
+}
+
+.menu li {
+	float: left;
+}
+
+.menu li a {
+	display: block;
+	height: 100px;
+	line-height: 100px;
+	padding-left: 30px;
+	text-decoration: none;
+	color: #888;
+	font-size: 18px;
+}
+.menu li a:hover {
+	color: #fff;
+}
+.menu li a.active {
+	color: #fff;
+}
+
+.main {
+	background: #fcfcfc;
+}
+
+.category {
+	float: left;
+	width: 250px;
+}
+
+.category ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.category ul li a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 30px;
+	text-decoration: none;
+	color: #555;
+}
+.category ul li a.active {
+	background: #eeeeee;
+	color: #f74818;
+}
+.category ul li a:hover {
+	color: #f74818;
+}
+
+.content {
+	margin-left: 250px;
+	min-height: 200px;
+	background: #f4f4f4;
+	border-left: 1px solid #e5e5e5;
+	padding: 30px;
+}
+
+.foot {
+	border-top: 1px solid #e5e5e5;
+	padding: 20px 0 20px 260px;
+	color: #666;
+}
+
+.foot a {
+	color: #f74818;
+}
+
+.biz-button-orange {
+	background-color: #f74818;
+}
+.biz-button-orange:hover {
+    background-color: #f86e49;
+}
+.biz-button-orange:active {
+    background-color: #e23606;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>BizIcon</title>
+<link type="text/css" rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+<div class="head">
+    <div class="title">BizIcon</div>
+    <ul class="menu">
+        <li><a href="javascript:void(0);" class="active">图标库</a></li>
+        <li><a href="/help">帮助</a></li>
+    </ul>
+</div>
+<div class="main">
+	<div class="category">
+    	<ul></ul>
+    </div>
+    <div class="content">
+    	<div class="toolbar" style="display:none">
+        	<button id="select-all">全选</button>
+        	<a href="/download"><button id="download">下载 SVG</button></a>
+        </div>
+        <div class="no-data" style="display:none">此分类下暂无图标</div>
+        <div class="svgs"></div>
+    </div>
+</div>
+<div class="foot">
+&copy; Sogou. Powered by <a href="mailto:bizdev_fe@sogou-inc.com">bizdev_fe</a>
+</div>
+
+<script id="tpl-category" type="text/html">
+{{#category}}
+<li><a href="javascript:void(0);">{{name}}</a></li>
+{{/category}}
+</script>
+
+<script id="tpl-svg" type="text/html">
+{{#svg}}
+<div class="svg">
+    <embed src="svg/{{path}}/{{name}}.svg" width="96" height="96" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+    <div class="name">{{name}}</div>
+    <span data-filename="{{name}}"></span>
+</div>
+{{/svg}}
+</script>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/mustache.js"></script>
+<script src="js/jquery.bizui.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
