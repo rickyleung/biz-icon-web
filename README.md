@@ -5,7 +5,6 @@ Web server for biz-icon
 
 Install
 -----
-Run these commands:
 
     $ git clone git://github.com/rickyleung/biz-icon-web.git
     $ cd biz-icon-web
