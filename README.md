@@ -11,7 +11,7 @@ Install
     $ npm install
     $ npm start
 
-Now you should have a biz-icon web server running on http://localhost:3000.
+Now you should have a biz-icon web server running on http://localhost:3002.
 
 [travis-image]: https://travis-ci.org/rickyleung/biz-icon-web.svg
 [travis-url]: https://travis-ci.org/rickyleung/biz-icon-web
